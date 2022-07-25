@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     else
       @prototype = @comment.prototype
       @comments = @prototype.comments
-      render "prototypes/show" # views/tweets/show.html.erbのファイルを参照しています。
+      redirect_to prototype_path(@prototype.id)
     end
   end
 
